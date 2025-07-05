@@ -1,0 +1,29 @@
+{
+  "name": "with-tailwind",
+  "private": true,
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev",
+    "lint": "turbo run lint",
+    "check-types": "turbo run check-types",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "test": "turbo run test",
+    "test:watch": "turbo run test:watch",
+    "test:coverage": "turbo run test:coverage",
+    "test:ci": "turbo run test:coverage -- --ci --maxWorkers=2",
+    "coverage:report": "node scripts/coverage-report.js"
+  },
+  "devDependencies": {
+    "prettier": "^3.6.0",
+    "prettier-plugin-tailwindcss": "^0.6.11",
+    "turbo": "^2.5.4"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "packageManager": "npm@10.9.2",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ]
+}
